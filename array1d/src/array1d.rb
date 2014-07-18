@@ -2,6 +2,7 @@
 module NPLAB
   
   module Array1D
+ 
     def self.normalize(v)
       z = length(v)
       n = v.size
@@ -70,6 +71,16 @@ module NPLAB
       (0...n).each{|i| result += v1[i] * v2[i]}
       return result
     end
+    
+    def self.substract(v1, v2)
+      n = v1.size
+      v = Array.new(n){0.0}
+      (0...n).each{|i|
+        v[i] = v1[i] - v2[i]
+      }
+      return v
+    end
+    
     
   end
 end

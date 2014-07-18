@@ -57,6 +57,11 @@ module NPLAB
       assert_equal(Array1D.dot(v1, v2), 10.0)
     end
     
+    def test_substract
+      v1 = [1, 2, 3]
+      v2 = [3, 2, 1]
+      assert_equal(Array1D.substract(v1, v2), [-2.0, 0.0, 2.0])
+    end
   end
  
 end
